@@ -568,6 +568,10 @@ video {
   width: 266px;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -665,5 +669,36 @@ video {
 
   .md\:text-font400 {
     font-size: 400px;
+  }
+}
+
+@media (min-width: 1028px,) {
+  .lg\:h-auto {
+    height: auto;
+  }
+
+  .lg\:w-\[770px\] {
+    width: 770px;
+  }
+
+  .lg\:w-14 {
+    width: 3.5rem;
+  }
+
+  .lg\:w-\[\] {
+    width: ;
+  }
+
+  .lg\:w-max {
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .lg\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .lg\:max-w-\[770px\] {
+    max-width: 770px;
   }
 }
