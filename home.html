@@ -23,25 +23,108 @@
     >
       Artwork generated with midjourney
     </p>
-
-    <div class="relative mt-6 mx-3 max-w-[768px] h-[256px]">
+    <!-- Whale_img -->
+    <div class="flex justify-center relative w-auto mx-3 mt-6 h-[256px]">
       <div
-        class="absolute border-2 border-hiColor w-2 h-2 left-[-1px] top-[-1px]"
+        class="absolute border-2 border-r-0 border-b-0 border-hiColor w-2 h-2 left-[-1px] top-[-1px]"
       ></div>
       <div
-        class="absolute border-2 border-hiColor w-2 h-2 right-[-1px] top-[-1px]"
+        class="absolute border-2 border-l-0 border-b-0 border-hiColor w-2 h-2 right-[-1px] top-[-1px]"
       ></div>
       <div
-        class="absolute border-2 border-hiColor w-2 h-2 left-[-1px] bottom-[-1px]"
+        class="absolute border-2 border-r-0 border-t-0 border-hiColor w-2 h-2 left-[-1px] bottom-[-1px]"
       ></div>
       <div
-        class="absolute border-2 border-hiColor w-2 h-2 right-[-1px] bottom-[-1px]"
+        class="absolute border-2 border-l-0 border-t-0 border-hiColor w-2 h-2 right-[-1px] bottom-[-1px]"
       ></div>
       <img
-        class="absolute w-full h-[256px] object-cover border border-[#ffffff21] z-10"
+        class="absolute w-full h-[256px] object-cover border border-[#ffffff21] home_screen_img:object-contain"
         src="img/whale.png"
         alt=""
       />
     </div>
+    <!-- name/occupation/corporation -->
+    <div
+      class="flex flex-row flex-wrap w-auto gap-x-[120px] gap-y-5 mx-4 mt-8 text-sm tracking-[0.075em] text-white font-iceland font-bold leading-none uppercase home_screen:justify-center"
+    >
+      <div class="flex flex-col">
+        <p>name</p>
+        <h2 class="h2 mt-1 text-lg font-big text-hiColor leading-none">
+          Roman G.
+        </h2>
+      </div>
+      <div class="flex flex-col">
+        <p>occupation</p>
+        <h2 class="mt-1 text-lg font-big text-hiColor uppercase leading-none">
+          web developer
+        </h2>
+      </div>
+      <div class="flex flex-col">
+        <p>corporation</p>
+        <h2 class="mt-1 text-lg font-big text-hiColor uppercase leading-none">
+          -
+        </h2>
+      </div>
+    </div>
+    <!--availability/social  -->
+    <div
+      class="flex flex-row flex-wrap w-auto gap-y-2 mx-4 mt-3 text-sm tracking-[0.075em] text-white font-iceland font-bold leading-none uppercase home_screen:max-w-[516px] home_screen:justify-center home_screen:mx-auto"
+    >
+      <div class="flex flex-col w-full">
+        <p>availability</p>
+        <form action="#" class="w-full h-[33px]">
+          <button
+            class="w-full h-[33px] bg-hiColor opacity-70 duration-500 hover:opacity-100 text-left"
+          >
+            <span
+              class="pl-6 font-big text-black text-lg leading-0 uppercase align-middle"
+              >open for hire</span
+            >
+          </button>
+        </form>
+      </div>
+      <div class="flex flex-col w-full">
+        <p>social</p>
+        <form action="#" class="w-full h-[33px]">
+          <button
+            class="flex flex-row border border-solid border-hiColor justify-between w-full h-[33px] opacity-70 duration-500 hover:opacity-100 text-left"
+          >
+            <span
+              class="pl-6 font-big text-red text-lg leading-0 uppercase my-auto"
+              >open connection</span
+            >
+            <img class="my-auto mr-1" src="img/home_connection.png" alt="" />
+          </button>
+        </form>
+      </div>
+    </div>
+    <footer
+      class="flex flex-row mt-40 text-white mx-2 gap-x-2 mb-3 home_screen:w-[510px] home_screen:mx-auto home_screen:justify-center"
+    >
+      <div class="flex flex-col w-full">
+        <form action="#" class="w-full h-[33px]">
+          <button
+            class="w-full h-[33px] bg-hiColor opacity-70 duration-500 hover:opacity-100"
+          >
+            <span
+              class="font-big text-black text-lg leading-0 uppercase align-middle"
+              >navigation</span
+            >
+          </button>
+        </form>
+      </div>
+      <div class="flex flex-col w-full">
+        <form action="#" class="w-full h-[33px]">
+          <button
+            class="border border-solid border-hiColor justify-between w-full h-[33px] opacity-70 duration-500 hover:opacity-100"
+          >
+            <span
+              class="font-big text-hiColor text-lg leading-0 uppercase my-auto"
+              >about</span
+            >
+          </button>
+        </form>
+      </div>
+    </footer>
   </body>
 </html>
