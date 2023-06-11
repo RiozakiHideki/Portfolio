@@ -14,13 +14,20 @@ module.exports = {
         extra: "538px",
         font400: "400px",
       },
+      letterSpacing: {
+        em0075: "0.075em",
+      },
       screens: {
         sm: "480px",
         home_screen: "516px",
         home_screen_img: "565px",
         md: "768px",
-        lg: "1028px,",
+        lg: "1024px",
         xl: "1440px",
+        fhd: "1920px",
+      },
+      gridTemplateColumns: {
+        main_screen: "288px auto 288px",
       },
     },
   },
