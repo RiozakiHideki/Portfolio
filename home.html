@@ -34,7 +34,7 @@
     </header>
 
     <!-- left nav.bar -->
-    <div class="lg:grid lg:grid-cols-main_screen">
+    <div class="lg:grid lg:grid-cols-main_screen" id="left-nav-bar">
       <nav class="hidden lg:flex lg:flex-col lg:w-full lg:pl-[78px]">
         <!-- avatar pic -->
         <div class="flex relative w-[194px] h-[148px]">
@@ -71,7 +71,7 @@
 
         <!--availability/social  -->
         <div
-          class="flex flex-col w-full mt-[22px] pr-4 text-sm tracking-[0.075em] text-white font-iceland leading-none uppercase">
+          class="flex flex-col w-full mt-[22px] mb-5 pr-4 text-sm tracking-[0.075em] text-white font-iceland leading-none uppercase">
           <div class="flex flex-col w-full">
             <p>availability</p>
             <form action="#" class="w-full h-[23px] mt-1">
@@ -100,9 +100,9 @@
         </div>
 
         <!-- Motto -->
-        <div class="font-iceland tracking-em0075 uppercase mt-[328px]">
+        <div class="font-iceland tracking-em0075 uppercase mb-0 mt-auto" id="motto">
           <h2 class="text-hiColor text-lg leading-[17px]">Motto:</h2>
-          <p class="mt-[6px] text-[#B2B7BA] text-base">
+          <p class="mt-[6px] text-[#B2B7BA] text-base leading-none">
             ZA DENʹGI DA <br />
             ZA DENʹGI DA <br />
             ZA DENʹGI DA
@@ -123,6 +123,20 @@
       <div
         class="flex justify-center relative w-auto mx-3 mt-6 h-[256px] lg:mt-0 lg:mx-0"
         id="whale_box">
+        <img
+          class="absolute w-full h-[256px] object-cover border border-[#ffffff21] home_screen_img:object-contain lg:h-auto fhd:max-h-[896px]"
+          src="img/whale.png"
+          alt=""
+          id="whale_pic" />
+        <script src="js/whale.js"></script>
+        <div
+          class="lg:absolute lg:flex-nowrap lg:text-white lg:mt-[10px] lg:text-center lg:font-iceland tracking-em0075 lg:leading-none uppercase">
+          <h1 class="">
+            swimming through a vast network of interconnected devices <br />
+            and servers, spreading joy and whimsy to users across the globe
+          </h1>
+          <p class="opacity-70 text-sm leading-none mt-2">Artwork generated with midjourney</p>
+        </div>
         <div
           class="absolute border-2 border-r-0 border-b-0 border-hiColor w-2 h-2 left-[-1px] top-[-1px]"></div>
         <div
@@ -131,11 +145,6 @@
           class="absolute border-2 border-r-0 border-t-0 border-hiColor w-2 h-2 left-[-1px] bottom-[-1px] lg:bottom-[-2px]"></div>
         <div
           class="absolute border-2 border-l-0 border-t-0 border-hiColor w-2 h-2 right-[-1px] bottom-[-1px] lg:bottom-[-2px]"></div>
-        <img
-          class="absolute w-full h-[256px] object-cover border border-[#ffffff21] home_screen_img:object-contain lg:h-auto fhd:max-h-[896px]"
-          src="img/whale.png"
-          alt=""
-          id="whale_pic" />
       </div>
       <nav class="hidden lg:flex"></nav>
     </div>

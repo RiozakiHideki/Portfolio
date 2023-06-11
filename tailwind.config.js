@@ -22,7 +22,7 @@ module.exports = {
         home_screen: "516px",
         home_screen_img: "565px",
         md: "768px",
-        lg: "1024px",
+        lg: "1280px",
         xl: "1440px",
         fhd: "1920px",
       },
