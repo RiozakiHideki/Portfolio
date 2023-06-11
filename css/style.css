@@ -1082,6 +1082,10 @@ video {
 }
 
 @media (min-width: 1280px) {
+  .lg\:visible {
+    visibility: visible;
+  }
+
   .lg\:absolute {
     position: absolute;
   }
@@ -1104,8 +1108,16 @@ video {
     margin-top: 0px;
   }
 
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .lg\:mt-\[10px\] {
     margin-top: 10px;
+  }
+
+  .lg\:inline {
+    display: inline;
   }
 
   .lg\:flex {
@@ -1164,6 +1176,11 @@ video {
     font-family: Iceland;
   }
 
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .lg\:font-bold {
     font-weight: 700;
   }
@@ -1183,6 +1200,10 @@ video {
   .lg\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .lg\:opacity-70 {
+    opacity: 0.7;
   }
 }
 
