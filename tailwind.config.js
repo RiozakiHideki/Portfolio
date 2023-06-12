@@ -18,7 +18,6 @@ module.exports = {
         em0075: "0.075em",
       },
       screens: {
-        min_screen: "300px",
         sm: "480px",
         home_screen: "516px",
         home_screen_img: "565px",
