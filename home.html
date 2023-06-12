@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="fhd:w-full">
+<html lang="en" class="w-screen">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -32,9 +32,8 @@
         <p class="mt-9">4:20</p>
       </div>
     </header>
-
     <!-- left nav.bar -->
-    <div class="lg:grid lg:grid-cols-main_screen" id="left-nav-bar">
+    <div class="lg:grid lg:grid-cols-main_screen lg:h-full">
       <nav class="hidden lg:flex lg:flex-col lg:w-full lg:pl-[78px]">
         <!-- avatar pic -->
         <div class="flex relative w-[194px] h-[148px]">
@@ -121,16 +120,14 @@
       </p>
       <!-- Whale_img -->
       <div
-        class="flex justify-center relative w-auto mx-3 mt-6 h-[256px] lg:mt-0 lg:mx-0"
-        id="whale_box">
+        class="flex justify-center relative max-w-full mx-3 mt-6 h-[256px] lg:mt-0 lg:mx-0 lg:h-full">
         <img
-          class="absolute w-full h-[256px] object-cover border border-[#ffffff21] home_screen_img:object-contain lg:h-auto fhd:max-h-[896px]"
+          class="w-full h-[256px] object-cover border border-[#ffffff21] home_screen_img:object-contain lg:h-auto fhd:max-h-[896px]"
           src="img/whale.png"
           alt=""
           id="whale_pic" />
-        <script src="js/whale.js"></script>
         <div
-          class="lg:absolute lg:flex-nowrap lg:text-white lg:mt-[10px] lg:text-center lg:font-iceland tracking-em0075 lg:leading-none uppercase">
+          class="hidden lg:block lg:absolute lg:flex-nowrap lg:text-white lg:mt-[10px] lg:text-center lg:font-iceland tracking-em0075 lg:leading-none uppercase">
           <h1 class="">
             swimming through a vast network of interconnected devices <br />
             and servers, spreading joy and whimsy to users across the globe
@@ -144,13 +141,77 @@
         <div
           class="absolute border-2 border-l-0 border-b-0 border-hiColor w-2 h-2 right-[-1px] top-[-1px]"></div>
         <div
-          class="absolute border-2 border-r-0 border-t-0 border-hiColor w-2 h-2 left-[-1px] bottom-[-1px] lg:bottom-[-2px]"></div>
+          class="absolute border-2 border-r-0 border-t-0 border-hiColor w-2 h-2 left-0 bottom-[-1px] lg:bottom-0"></div>
         <div
-          class="absolute border-2 border-l-0 border-t-0 border-hiColor w-2 h-2 right-[-1px] bottom-[-1px] lg:bottom-[-2px]"></div>
+          class="absolute border-2 border-l-0 border-t-0 border-hiColor w-2 h-2 right-0 bottom-[-1px] lg:bottom-0"></div>
       </div>
-      <nav class="hidden lg:flex"></nav>
+      <!-- right nav.bar -->
+      <nav
+        class="hidden lg:flex lg:flex-col lg:ml-4 lg:border-l-2 lg:border-hiColor lg:h-fit lg:uppercase lg:tracking-em0075">
+        <p
+          class="bg-hiColor bg-opacity-70 w-[196px] h-[23px] pl-2 font-big text-white text-lg leading-[24px] font-bold">
+          active quest
+        </p>
+        <p
+          class="bg-hiColor bg-opacity-10 w-[196px] h-[30px] pl-2 font-iceland text-[#7A7A7A] text-sm leading-none py-2">
+          Web layout skill-up
+        </p>
+        <p class="font-iceland text-white text-sm leading-none ml-2 mt-4">quest name</p>
+        <p class="font-big text-hiColor text-lg font-bold leading-[22px] ml-2 mt-1">
+          portfolio website
+        </p>
+        <p class="font-iceland text-white text-sm leading-none ml-2 mt-6">goal</p>
+        <p class="font-iceland text-[#7A7A7A] text-sm leading-none pl-2 mt-1">
+          build this website. <br />
+          make it all greate!
+        </p>
+      </nav>
     </div>
-
+    <!-- buttoms -->
+    <div
+      class="hidden lg:absolute lg:w-full lg:flex lg:flex-row lg:gap-x-4 lg:h-[59px] lg:justify-center lg:mt-[-23px] lg:uppercase lg:tracking-em0075 fhd:max-w-screen-fhd fhd:mx-auto">
+      <div class="flex flex-col border-l-2 border-[#242425]">
+        <p
+          class="w-[150px] h-[23px] bg-hiColor font-big font-bold text-white text-lg leading-[22px] pl-2">
+          beginning
+        </p>
+        <p class="font-iceland text-[10px] leading-none text-white opacity-50 mt-2 pl-2">
+          Home page with basic <br />
+          information <br />
+          and navigation.
+        </p>
+      </div>
+      <div class="flex flex-col border-l-2 border-[#242425]">
+        <p
+          class="w-[150px] h-[23px] bg-hiColor font-big font-bold text-white text-lg leading-[22px] pl-2">
+          logs
+        </p>
+        <p class="font-iceland text-[10px] leading-none text-white opacity-50 mt-2 pl-2">
+          Quests log page
+        </p>
+      </div>
+      <div class="flex flex-col border-l-2 border-[#242425]">
+        <p
+          class="w-[150px] h-[23px] bg-hiColor font-big font-bold text-white text-lg leading-[22px] pl-2">
+          achievements
+        </p>
+        <p class="font-iceland text-[10px] leading-none text-white opacity-50 mt-2 pl-2">
+          achievements page
+        </p>
+      </div>
+      <div class="flex flex-col border-l-2 border-[#242425]">
+        <p
+          class="w-[150px] h-[23px] bg-hiColor font-big font-bold text-white text-lg leading-[22px] pl-2">
+          creations
+        </p>
+        <p class="font-iceland text-[10px] leading-none text-white opacity-50 mt-2 pl-2">
+          Home page with basic <br />
+          information <br />
+          and navigation.
+        </p>
+      </div>
+    </div>
+    <div class="w-full h-14"></div>
     <!-- name/occupation/corporation -->
     <div
       class="flex flex-row flex-wrap w-auto gap-x-[120px] gap-y-5 mx-4 mt-8 text-sm tracking-em0075 text-white font-iceland leading-none uppercase home_screen:justify-center lg:hidden">
