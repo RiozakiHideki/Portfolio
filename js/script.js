@@ -27,3 +27,22 @@ coin_button.addEventListener("click", function () {
     return (currentValue || 0) + 1;
   });
 });
+
+var doorEl = document.getElementById("door");
+var hire_btn = document.getElementById("hire_btn");
+var hire_content = document.getElementById("hire_content");
+var discard = document.getElementById("discard");
+
+hire_btn.addEventListener("click", function () {
+  doorEl.style.transform = "perspective(1920px) rotateY(-40deg) scale(0.6)";
+  doorEl.style.marginRight = "-385px";
+  doorEl.style.marginTop = "-188px";
+  hire_content.style.display = "block";
+});
+
+discard.addEventListener("click", function () {
+  doorEl.style.transform = "rotateY(0deg) scale(1.0)";
+  doorEl.style.marginRight = "0px";
+  doorEl.style.marginTop = "0px";
+  hire_content.style.display = "none";
+});
