@@ -30,8 +30,12 @@ coin_button.addEventListener("click", function () {
 
 var doorEl = document.getElementById("door");
 var hire_btn = document.getElementById("hire_btn");
+var social_btn = document.getElementById("social_btn");
 var hire_content = document.getElementById("hire_content");
+var credits_btn = document.getElementById("credits_btn");
+var credits_content = document.getElementById("credits_content");
 var discard = document.getElementById("discard");
+var cancel = document.getElementById("cancel");
 
 hire_btn.addEventListener("click", function () {
   doorEl.style.transform = "perspective(1920px) rotateY(-40deg) scale(0.6)";
@@ -40,9 +44,30 @@ hire_btn.addEventListener("click", function () {
   hire_content.style.display = "block";
 });
 
+social_btn.addEventListener("click", function () {
+  doorEl.style.transform = "perspective(1920px) rotateY(-40deg) scale(0.6)";
+  doorEl.style.marginRight = "-385px";
+  doorEl.style.marginTop = "-188px";
+  hire_content.style.display = "block";
+});
+
+credits_btn.addEventListener("click", function () {
+  doorEl.style.transform = "perspective(1920px) rotateY(-40deg) scale(0.6)";
+  doorEl.style.marginRight = "-385px";
+  doorEl.style.marginTop = "-188px";
+  credits_content.style.display = "block";
+});
+
 discard.addEventListener("click", function () {
   doorEl.style.transform = "rotateY(0deg) scale(1.0)";
   doorEl.style.marginRight = "0px";
   doorEl.style.marginTop = "0px";
   hire_content.style.display = "none";
+});
+
+cancel.addEventListener("click", function () {
+  doorEl.style.transform = "rotateY(0deg) scale(1.0)";
+  doorEl.style.marginRight = "0px";
+  doorEl.style.marginTop = "0px";
+  credits_content.style.display = "none";
 });

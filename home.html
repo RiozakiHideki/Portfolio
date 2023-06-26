@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Home</title>
   </head>
-  <body class="bg-black fhd:max-w-screen-fhd fhd:justify-center fhd:mx-auto">
+  <body class="bg-black fhd:max-w-screen-fhd fhd:justify-center fhd:mx-auto overflow-x-hidden">
+    <!-- hire content -->
     <div class="hidden absolute w-[470px] ml-10 mt-52 uppercase" id="hire_content">
       <h3 class="text-white font-big text-lg font-bold tracking-em0075">open for hire</h3>
       <p class="text-[#B2B7BA] font-iceland text-base">I would love to hear about your projects!</p>
@@ -55,6 +56,58 @@
         </form>
       </div>
     </div>
+    <!-- credits content -->
+    <div class="hidden absolute w-[470px] ml-10 mt-52 uppercase" id="credits_content">
+      <h3 class="text-white font-big text-lg font-bold tracking-em0075">credits</h3>
+      <p class="text-[#B2B7BA] font-iceland text-base">Everything involved in this project</p>
+      <hr class="mt-5 border-t-4 border-hiColor" />
+      <!-- after hr-->
+      <div class="flex flex-col mt-11">
+        <div class="flex flex-row justify-between">
+          <p class="text-white font-big text-lg font-bold tracking-em0075">developed by</p>
+          <div class="text-[#B2B7BA] w-[314px] flex-wrap font-iceland text-lg">
+            <p>
+              <span class="animate-gradient-color-animation gradient-text-animation">Riozaki </span>
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-row justify-between">
+          <p class="text-white font-big text-lg font-bold tracking-em0075">special thanks</p>
+          <div class="text-[#B2B7BA] w-[314px] flex-wrap font-iceland text-lg">
+            <p>
+              Quin telegram:
+              <span class="animate-gradient-color-animation gradient-text-animation"
+                >@Inquinima</span
+              >
+            </p>
+            <p class="mt-6">
+              <span class="animate-gradient-color-animation gradient-text-animation"
+                >Alisa Dremova</span
+              >
+              - Moral support
+            </p>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-row justify-between">
+          <p class="text-white font-big text-lg font-bold tracking-em0075">designed by</p>
+          <div class="text-[#B2B7BA] w-[314px] flex-wrap font-iceland text-lg">
+            <p class="animate-gradient-color-animation gradient-text-animation">
+              alex dimitrov @xavortm
+            </p>
+            <form action="#" class="mt-7 w-full h-[33px]" id="cancel">
+              <button
+                class="w-full h-[33px] border-[1px] border-[#ffffff45] opacity-70 duration-500 hover:opacity-100 text-center">
+                <span
+                  class="font-big text-hiColor text-lg leading-[22px] tracking-em0075 uppercase font-bold"
+                  >Cancel</span
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="duration-500" id="door">
       <div>
         <header
@@ -74,7 +127,9 @@
             <p class="text-base opacity-60 leading-[19px] mt-[39px] ml-[6px]">coins awarded</p>
           </div>
           <div class="flex flex-row text-white font-iceland text-sm">
-            <a href="#" class="text-base mt-[34px] mr-[27px]">credits</a>
+            <button class="text-base mt-[34px] mr-[27px] border-none h-fit" id="credits_btn">
+              <span class="tracking-em0075">credits</span>
+            </button>
             <p class="text-[#7A7A7A] mt-9 mr-2">server time:</p>
             <p class="mt-9 mr-7">4:20</p>
             <p class="text-[#7A7A7A] mt-9 mr-2">server time:</p>
@@ -136,7 +191,7 @@
               </div>
               <div class="flex flex-col w-full mt-[22px]">
                 <p>social</p>
-                <form action="#" class="w-full h-[23px]">
+                <form action="#" class="w-full h-[23px]" id="social_btn">
                   <button
                     class="flex flex-row border border-solid border-hiColor justify-between w-full h-[23px] opacity-70 duration-500 hover:opacity-100 text-left">
                     <span

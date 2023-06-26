@@ -30,6 +30,30 @@ module.exports = {
         main_screen: "288px auto 288px",
       },
     },
+    keyframes: {
+      "gradient-color-animation": {
+        "0%": { "background-position": "100% 0%" },
+        "100%": { "background-position": "0% 0%" },
+      },
+    },
+    animation: {
+      "gradient-color-animation": "gradient-color-animation 5s linear infinite alternate",
+    },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const utilities = {
+        ".gradient-text-animation": {
+          background:
+            "linear-gradient(to right, #FFFFFF 15%, #FF0000, #FFA500, #FFFF00, #00FF00, #6F00FF, #EE82EE 60%, white 15%)",
+          "background-clip": "text",
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+          "background-size": "1000% 100%",
+        },
+      };
+
+      addUtilities(utilities, ["responsive"]);
+    },
+  ],
 };
