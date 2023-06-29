@@ -87,7 +87,7 @@ function getCurrentTime() {
   document.getElementById("localTime").innerHTML = localTime;
 
   fetch(
-    "http://api.timezonedb.com/v2.1/get-time-zone?key=RD26LK2PQ8Z5&format=json&by=zone&zone=Europe/Moscow"
+    "https://api.timezonedb.com/v2.1/get-time-zone?key=RD26LK2PQ8Z5&format=json&by=zone&zone=Europe/Moscow"
   )
     .then((response) => response.json())
     .then((data) => {
