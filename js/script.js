@@ -1,3 +1,4 @@
+///////////////// Database ////////////////////////////////////
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {
   getDatabase,
@@ -27,6 +28,10 @@ coin_button.addEventListener("click", function () {
     return (currentValue || 0) + 1;
   });
 });
+
+///////////////// Database ////////////////////////////////////
+
+///////////////// animations ////////////////////////////////////
 
 var doorEl = document.getElementById("door");
 var hire_btn = document.getElementById("hire_btn");
@@ -71,3 +76,22 @@ cancel.addEventListener("click", function () {
   doorEl.style.marginTop = "0px";
   credits_content.style.display = "none";
 });
+
+///////////////// animations ////////////////////////////////////
+
+///////////////// Date ////////////////////////////////////
+
+function getCurrentTime() {
+  var date = new Date(); // Получаем текущую дату и время
+  var serverTime = date.getHours() + ":" + date.getMinutes(); // Получаем время сервера
+
+  var localDate = new Date(); // Получаем текущую дату и время
+  var localTime = localDate.getHours() + ":" + localDate.getMinutes(); // Получаем локальное время пользователя
+
+  document.getElementById("serverTime").innerHTML = serverTime; // Записываем время сервера в первый тег <p>
+  document.getElementById("localTime").innerHTML = localTime; // Записываем локальное время пользователя во второй тег <p>
+}
+
+getCurrentTime();
+
+///////////////// Date ////////////////////////////////////
