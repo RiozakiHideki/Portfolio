@@ -82,21 +82,29 @@ cancel.addEventListener("click", function () {
 ///////////////// Date ////////////////////////////////////
 
 function getCurrentTime() {
-  var date = new Date(); // Получаем текущую дату и время
-  var localTime = date.getHours() + ":" + date.getMinutes().toString().padStart(2, "0"); // Получаем локальное время пользователя
-  document.getElementById("localTime").innerHTML = localTime; // Записываем локальное время пользователя во второй тег <p>
+  var date = new Date();
+  var localTime = date.getHours() + ":" + date.getMinutes().toString().padStart(2, "0");
+  document.getElementById("localTime").innerHTML = localTime;
 
-  var utc = date.getTime() + date.getTimezoneOffset() * 60000; // Получаем UTC время в миллисекундах
-  var utcPlus3 = utc + 3 * 60 * 60 * 1000; // Прибавляем 3 часа (3 * 60 * 60 * 1000 миллисекунд) к UTC времени
-  var utcPlus3Date = new Date(utcPlus3); // Преобразуем полученное время обратно в объект типа Date
-  var serverTime = utcPlus3Date.toLocaleTimeString("en-US", {
-    hour12: false,
-    hour: "numeric",
-    minute: "numeric",
-  });
+  fetch(
+    "http://api.timezonedb.com/v2.1/get-time-zone?key=RD26LK2PQ8Z5&format=json&by=zone&zone=Europe/Moscow"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      const apiTime = data.formatted; // Полученное время из API в формате "2023-06-29 18:39:32"
+      const datetime = new Date(apiTime); // Преобразование строки времени в объект типа Date
 
-  // Обновляем значение времени в теге <p>
-  document.getElementById("serverTime").textContent = serverTime;
+      // Получение компонентов времени
+      const hours = datetime.getHours().toString().padStart(2, "0");
+      const minutes = datetime.getMinutes().toString().padStart(2, "0");
+
+      const formattedTime = hours + ":" + minutes; // Форматированное время в формате "hh:mm"
+
+      document.getElementById("serverTime").textContent = formattedTime;
+    })
+    .catch((error) => {
+      console.error("Ошибка при получении времени Москвы:", error);
+    });
 }
 
 getCurrentTime();
