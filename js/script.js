@@ -83,13 +83,20 @@ cancel.addEventListener("click", function () {
 
 function getCurrentTime() {
   var date = new Date(); // Получаем текущую дату и время
-  var serverTime = date.getHours() + ":" + date.getMinutes(); // Получаем время сервера
-
-  var localDate = new Date(); // Получаем текущую дату и время
-  var localTime = localDate.getHours() + ":" + localDate.getMinutes(); // Получаем локальное время пользователя
-
-  document.getElementById("serverTime").innerHTML = serverTime; // Записываем время сервера в первый тег <p>
+  var localTime = date.getHours() + ":" + date.getMinutes().toString().padStart(2, "0"); // Получаем локальное время пользователя
   document.getElementById("localTime").innerHTML = localTime; // Записываем локальное время пользователя во второй тег <p>
+
+  var utc = date.getTime() + date.getTimezoneOffset() * 60000; // Получаем UTC время в миллисекундах
+  var utcPlus3 = utc + 3 * 60 * 60 * 1000; // Прибавляем 3 часа (3 * 60 * 60 * 1000 миллисекунд) к UTC времени
+  var utcPlus3Date = new Date(utcPlus3); // Преобразуем полученное время обратно в объект типа Date
+  var serverTime = utcPlus3Date.toLocaleTimeString("en-US", {
+    hour12: false,
+    hour: "numeric",
+    minute: "numeric",
+  });
+
+  // Обновляем значение времени в теге <p>
+  document.getElementById("serverTime").textContent = serverTime;
 }
 
 getCurrentTime();
