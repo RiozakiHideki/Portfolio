@@ -11,8 +11,5 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "dependencies": {
-    "vue-carousel-3d": "^1.0.1"
   }
 }
