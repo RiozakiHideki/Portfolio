@@ -29,6 +29,9 @@ module.exports = {
       gridTemplateColumns: {
         main_screen: "288px auto 288px",
       },
+      margin: {
+        ml_center: "calc((100% - 30%) / 2);",
+      },
     },
     keyframes: {
       "gradient-color-animation": {
